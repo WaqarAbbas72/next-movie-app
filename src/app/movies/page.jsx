@@ -1,4 +1,5 @@
 import MovieCard from "@/components/MovieCard";
+import Link from "next/link";
 
 const Movies = async () => {
     try {
@@ -23,23 +24,22 @@ const Movies = async () => {
         const main_data = data?.titles;
 
         return (
-            <>
-                <h1 className="text-center mt-5 text-2xl font-bold">Series & Movies</h1>
+            <div className="bg-zinc-900 text-white">
+                <h1 className="text-center text-4xl font-bold">Series & Movies</h1>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 p-3 md:p-10">
                     {main_data?.map((curElem) => {
                         return <MovieCard key={curElem.id} {...curElem} />;
                     })}
                 </div>
-            </>
+            </div>
         );
     } catch (error) {
         // Handle the error here
         console.error("Error fetching data:", error);
-
-        // You can also return an error message or render an error component
         return (
-            <div>
-                <p>An error occurred while fetching data.</p>
+            <div className="flex flex-col justify-center items-center mt-20">
+                <h1 className="text-lg text-red-600">Error occurred while fetching data</h1>
+                <Link href='/' className="text-gray-600 underline">Back to Home</Link>
             </div>
         );
     }
