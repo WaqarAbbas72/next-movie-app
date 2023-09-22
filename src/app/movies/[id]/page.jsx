@@ -4,6 +4,7 @@ import Link from "next/link";
 const page = async ({ params }) => {
   try {
     const id = params.id;
+    // console.log(id);
 
     const url = `https://netflix54.p.rapidapi.com/title/details/?ids=${id}&lang=en`;
     const options = {
@@ -26,7 +27,7 @@ const page = async ({ params }) => {
     const imageUrl = main_data?.backgroundImage.url;
     const { title, synopsis, releaseYear } = main_data;
 
-    console.log(main_data);
+    // console.log(main_data);
 
     return (
       <div className="p-3 sm:p-10">
@@ -63,3 +64,8 @@ const page = async ({ params }) => {
 };
 
 export default page;
+
+export const metadata = {
+  title: 'Movie Detail',
+  description : 'Netflix Movie Detail'
+}

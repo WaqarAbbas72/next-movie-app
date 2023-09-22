@@ -17,5 +17,167 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3"
-  }
+  },
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Adventure Begins",
+      "genre": "Action",
+      "year": 2022,
+      "description": "A thrilling action-packed adventure.",
+      "director": "John Director",
+      "rating": 4.5,
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDc1NjlhMjEtODRkZi00MDFkLWFhNDAtZDZmMjQ2MjhiYWE2XkEyXkFqcGdeQXVyMTM0NDA0MjM3._V1_.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Romantic Escapade",
+      "genre": "Romance",
+      "year": 2021,
+      "description": "A heartwarming love story.",
+      "director": "Jane Director",
+      "rating": 4.2,
+      "thumbnail": "https://www.sakalaresortbali.com/wp-content/uploads/2020/10/romantic-escapade-700px.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Sci-Fi Adventure",
+      "genre": "Science Fiction",
+      "year": 2023,
+      "description": "An epic journey through space and time.",
+      "director": "Sam Director",
+      "rating": 4.7,
+      "thumbnail": "https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2021/02/07/space-sweepers-review-a-sci-fi-adventure-covered-with-some-pretty-cool-space-action.jpg?fit=1024%2C576&quality=80&zoom=1&ssl=1"
+    },
+    {
+      "id": 4,
+      "title": "Mystery Mansion",
+      "genre": "Mystery",
+      "year": 2020,
+      "description": "A suspenseful mystery in an old mansion.",
+      "director": "Mystery Director",
+      "rating": 4,
+      "thumbnail": "https://www.hiddenobjectgames.com/uploaded/game/screenshot/the-mystery-mansion-800.webp"
+    },
+    {
+      "id": 5,
+      "title": "Comedy Carnival",
+      "genre": "Comedy",
+      "year": 2019,
+      "description": "Laugh-out-loud comedy extravaganza.",
+      "director": "Chuckles McLaugh",
+      "rating": 4.8,
+      "thumbnail": "https://storage.googleapis.com/fetelist-public/vibes/styles/full/s3/event/image/202309/fetelist-comedy-and-carnival.jpg?itok=bX2u6mTl"
+    },
+    {
+      "id": 6,
+      "title": "Historical Epic",
+      "genre": "Drama",
+      "year": 2021,
+      "description": "A sweeping historical drama.",
+      "director": "History Buff",
+      "rating": 4.3,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmS8M5-Ezpx2ewUBT53Nba5BDzbSJCQMr5MXBDBBlxlC11gNA5sR0loQ2CwJGPMymqRg&usqp=CAU"
+    },
+    {
+      "id": 7,
+      "title": "Thriller Night",
+      "genre": "Thriller",
+      "year": 2018,
+      "description": "A heart-pounding thriller under the moonlight.",
+      "director": "Tension Master",
+      "rating": 4.6,
+      "thumbnail": "https://akamaividz2.zee5.com/image/upload/w_1170,h_658,c_scale,f_webp,q_auto:eco/resources/0-0-ekthrillernight/list/ekthrillernight1170x658.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Fantasy Quest",
+      "genre": "Fantasy",
+      "year": 2024,
+      "description": "A magical journey in a mystical land.",
+      "director": "Fantasy Weaver",
+      "rating": 4.9,
+      "thumbnail": "https://m.media-amazon.com/images/I/61Ubd4RHqAL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Horror House",
+      "genre": "Horror",
+      "year": 2022,
+      "description": "A spine-tingling horror experience.",
+      "director": "Horror Maestro",
+      "rating": 4.4,
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTU2MzIyODIxOV5BMl5BanBnXkFtZTcwNzQyNzA1OA@@._V1_.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Animated Adventure",
+      "genre": "Animation",
+      "year": 2020,
+      "description": "A fun-filled animated adventure for all ages.",
+      "director": "Animation Wizard",
+      "rating": 4.7,
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjA4OTE0MjAwNl5BMl5BanBnXkFtZTgwMjY4Mzg2OTE@._V1_.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Historical Romance",
+      "genre": "Romance",
+      "year": 2017,
+      "description": "Love amidst historical settings.",
+      "director": "Romance Master",
+      "rating": 4.1,
+      "thumbnail": "https://kissatmidnight.files.wordpress.com/2016/08/latest.jpg?w=349&h=498"
+    },
+    {
+      "id": 12,
+      "title": "Superhero Saga",
+      "genre": "Action",
+      "year": 2023,
+      "description": "Epic battles of superheroes and villains.",
+      "director": "Superhero Director",
+      "rating": 4.6,
+      "thumbnail": "https://images.thedirect.com/media/article_full/every-superhero-movie-coming-in-2023-ranked-by-excitement-level_2.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Sci-Fi Thriller",
+      "genre": "Science Fiction",
+      "year": 2019,
+      "description": "Mind-bending science fiction thriller.",
+      "director": "Sci-Fi Maestro",
+      "rating": 4.3,
+      "thumbnail": "https://hips.hearstapps.com/hmg-prod/images/mv5bmtc5otk4mtm3m15bml5banbnxkftztgwodcxnjg3mdeat-v1-1-1589308231.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Family Fun",
+      "genre": "Family",
+      "year": 2022,
+      "description": "Fun and adventure for the whole family.",
+      "director": "Family Director",
+      "rating": 4.8,
+      "thumbnail": "https://triadmomsonmain.com/wp-content/uploads/2022/12/FamilyWatchingMovie.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Crime Drama",
+      "genre": "Crime",
+      "year": 2021,
+      "description": "A gripping crime drama.",
+      "director": "Crime Master",
+      "rating": 4.4,
+      "thumbnail": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdRd8wUlJzb1-fjBCXqUhxrmttZKVhrCixvviBjaIuQM0AjBx7O8nVTiDPFPeDHPJnt0cYbswyxAcxE3cQxQGBeqYLNImJ7bnpc.jpg?r=0a1"
+    },
+    {
+      "id": 16,
+      "title": "Fantasy World",
+      "genre": "Fantasy",
+      "year": 2020,
+      "description": "A journey to a magical fantasy world.",
+      "director": "Fantasy Creator",
+      "rating": 4.5,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWO8iHxduwTJzfABKGwzwvuvb4DjGO_LVsz38C7PIVs2OvtjySxBFrYnYsuof5djlwpc4&usqp=CAU"
+    }
+  ]
 }

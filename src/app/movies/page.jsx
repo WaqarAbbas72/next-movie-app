@@ -21,10 +21,11 @@ const Movies = async () => {
         }
 
         const data = await response.json();
-        const main_data = data?.titles;
+        const main_data = data?.titles
+        console.log(main_data);
 
         return (
-            <div className="bg-zinc-900 text-white">
+            <div className="bg-zinc-900 text-white pt-20">
                 <h1 className="text-center text-4xl font-bold">Series & Movies</h1>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 p-3 md:p-10">
                     {main_data?.map((curElem) => {
@@ -46,3 +47,8 @@ const Movies = async () => {
 };
 
 export default Movies;
+
+export const metadata = {
+    title: 'Movies',
+    description: 'Netflix Movies'
+}
