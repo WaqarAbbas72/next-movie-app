@@ -5,8 +5,7 @@ import Link from "next/link"
 const MovieCard = (curElem) => {
 
     const { id, title } = curElem.jawSummary
-    const { url } = curElem.jawSummary.backgroundImage
-    // console.log(url);
+    const { url } = curElem.jawSummary.backgroundImage;
     return (
         <Link href={`/movies/${id}`}>
             <div className="rounded-sm p-2 hover:scale-105 duration-300">
