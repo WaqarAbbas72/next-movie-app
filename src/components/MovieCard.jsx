@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const MovieCard = (curElem) => {
 
-    const { id, type, title, synopsis } = curElem.jawSummary
+    const { id, title } = curElem.jawSummary
     const { url } = curElem.jawSummary.backgroundImage
     // console.log(url);
     return (
@@ -15,11 +15,6 @@ const MovieCard = (curElem) => {
                 </div>
                 <div className="flex flex-col gap-2">
                     <p className="mt-3 font-medium text-center">{`${title.substring(0, 25)}...`}</p>
-                    {/* <p className="text-gray-500 ">{`${synopsis.substring(0, 70)}...`}</p>
-
-                <Link href={`/movies/${id}`} className="text-red-600 duration-300 w-max rounded-full " >
-                    <button>Read More</button>
-                </Link> */}
                 </div>
             </div>
         </Link>

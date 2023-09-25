@@ -22,7 +22,7 @@ const Movies = async () => {
 
         const data = await response.json();
         const main_data = data?.titles
-        console.log(main_data);
+        // console.log(main_data);
 
         return (
             <div className="bg-zinc-900 text-white pt-20">

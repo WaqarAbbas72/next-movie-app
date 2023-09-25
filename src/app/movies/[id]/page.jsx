@@ -3,10 +3,8 @@ import Link from "next/link";
 
 const page = async ({ params }) => {
   try {
-    const id = params.id;
-    // console.log(id);
-
-    const url = `https://netflix54.p.rapidapi.com/title/details/?ids=${id}&lang=en`;
+    const url =
+      "https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en";
     const options = {
       method: "GET",
       headers: {
@@ -16,22 +14,36 @@ const page = async ({ params }) => {
     };
 
     const response = await fetch(url, options);
+    const id = params.id
 
     if (!response.ok) {
-      // Handle non-successful response (e.g., HTTP error status)
-      throw new Error(`HTTP Error: ${response.status}`);
+      // Handle non-OK response (e.g., network error, 404, etc.)
+      throw new Error(`HTTP Error! Status: ${response.status}`);
     }
 
     const data = await response.json();
-    const main_data = data[0]?.details;
-    const imageUrl = main_data?.backgroundImage.url;
-    const { title, synopsis, releaseYear } = main_data;
-
+    const main_data = data.titles;
     // console.log(main_data);
+    console.log(id);
+
+    const filteredMovies = main_data.filter((item) => item.jawSummary.id === id)
+    console.log(filteredMovies);
+
+    if (filteredMovies.length === 0) {
+      // Handle the case where the movie with the given id is not found
+      return (
+        <div className="flex flex-col justify-center items-center mt-20">
+          <h1 className="text-lg text-red-600">Movie not found</h1>
+          <Link href="/movies" className="text-gray-600 underline">
+            Back to Movies
+          </Link>
+        </div>
+      );
+    }
 
     return (
       <div className="p-3 sm:p-10">
-        <Link href="/movies" className="text-gray-600 underline">
+        {/* <Link href="/movies" className="text-gray-600 underline">
           Back to Movies
         </Link>
         <p className="font-bold text-xl text-red-600 my-5">
@@ -50,7 +62,7 @@ const page = async ({ params }) => {
             <p className="text-xl text-red-600 ">Release Year : <span className="text-black"> {releaseYear}</span></p>
             <p className="text-xl text-red-600 ">Director : <span className="text-black"> {main_data.directors[0]?.name || null}</span></p>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   } catch (error) {
@@ -67,5 +79,5 @@ export default page;
 
 export const metadata = {
   title: 'Movie Detail',
-  description : 'Netflix Movie Detail'
+  description: 'Netflix Movie Detail'
 }
