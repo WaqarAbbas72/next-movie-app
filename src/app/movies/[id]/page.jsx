@@ -32,7 +32,7 @@ const page = async ({ params }) => {
     if (filteredMovies.length === 0) {
       // Handle the case where the movie with the given id is not found
       return (
-        <div className="flex flex-col justify-center items-center mt-20">
+        <div className="flex flex-col justify-center items-center pt-20">
           <h1 className="text-lg text-red-600">Movie not found</h1>
           <Link href="/movies" className="text-gray-600 underline">
             Back to Movies
@@ -43,7 +43,7 @@ const page = async ({ params }) => {
 
     return (
       <div className="p-3 sm:p-10">
-        {/* <Link href="/movies" className="text-gray-600 underline">
+        <Link href="/movies" className="text-gray-600 underline">
           Back to Movies
         </Link>
         <p className="font-bold text-xl text-red-600 my-5">
@@ -62,7 +62,7 @@ const page = async ({ params }) => {
             <p className="text-xl text-red-600 ">Release Year : <span className="text-black"> {releaseYear}</span></p>
             <p className="text-xl text-red-600 ">Director : <span className="text-black"> {main_data.directors[0]?.name || null}</span></p>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   } catch (error) {
