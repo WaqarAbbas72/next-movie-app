@@ -1,45 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
+import { fetchMoviesApi } from "@/MoviesApi/MoviesApi";
 
 const page = async ({ params }) => {
   try {
-    const url =
-      "https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en";
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "a81d2279e5mshe3dd6222ed7d694p1014e3jsncd78d3c6024b",
-        "X-RapidAPI-Host": "netflix54.p.rapidapi.com",
-      },
-    };
-
-    const response = await fetch(url, options);
     const id = params.id
+    const response = await fetchMoviesApi()
+    const main_data = response.titles
 
-    if (!response.ok) {
-      // Handle non-OK response (e.g., network error, 404, etc.)
-      throw new Error(`HTTP Error! Status: ${response.status}`);
-    }
+    // if (!response.ok) {
+    //   // Handle non-OK response (e.g., network error, 404, etc.)
+    //   throw new Error(`HTTP Error! Status: ${response.status}`);
+    // }
 
-    const data = await response.json();
-    const main_data = data.titles;
-    // console.log(main_data);
-    console.log(id);
+    const filter = main_data.filter((item) => item.jawSummary.id === id)
+    console.log(filter);
 
-    const filteredMovies = main_data.filter((item) => item.jawSummary.id === id)
-    console.log(filteredMovies);
-
-    if (filteredMovies.length === 0) {
-      // Handle the case where the movie with the given id is not found
-      return (
-        <div className="flex flex-col justify-center items-center pt-20">
-          <h1 className="text-lg text-red-600">Movie not found</h1>
-          <Link href="/movies" className="text-gray-600 underline">
-            Back to Movies
-          </Link>
-        </div>
-      );
-    }
+    // if (filteredMovies.length === 0) {
+    // Handle the case where the movie with the given id is not found
+    return (
+      <div className="flex flex-col justify-center items-center pt-20">
+        <h1 className="text-lg text-red-600">Movie not found</h1>
+        <Link href="/movies" className="text-gray-600 underline">
+          Back to Movies
+        </Link>
+      </div>
+    );
+    // }
 
     return (
       <div className="p-3 sm:p-10">
