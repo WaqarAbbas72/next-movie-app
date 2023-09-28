@@ -8,25 +8,25 @@ const page = async ({ params }) => {
     const response = await fetchMoviesApi()
     const main_data = response.titles
 
-    // if (!response.ok) {
-    //   // Handle non-OK response (e.g., network error, 404, etc.)
-    //   throw new Error(`HTTP Error! Status: ${response.status}`);
-    // }
+    if (!response.ok) {
+      // Handle non-OK response (e.g., network error, 404, etc.)
+      throw new Error(`HTTP Error! Status: ${response.status}`);
+    }
 
     const filter = main_data.filter((item) => item.jawSummary.id === id)
     console.log(filter);
 
-    // if (filteredMovies.length === 0) {
-    // Handle the case where the movie with the given id is not found
-    return (
-      <div className="flex flex-col justify-center items-center pt-20">
-        <h1 className="text-lg text-red-600">Movie not found</h1>
-        <Link href="/movies" className="text-gray-600 underline">
-          Back to Movies
-        </Link>
-      </div>
-    );
-    // }
+    if (filteredMovies.length === 0) {
+      // Handle the case where the movie with the given id is not found
+      return (
+        <div className="flex flex-col justify-center items-center pt-20">
+          <h1 className="text-lg text-red-600">Movie not found</h1>
+          <Link href="/movies" className="text-gray-600 underline">
+            Back to Movies
+          </Link>
+        </div>
+      );
+    }
 
     return (
       <div className="p-3 sm:p-10">
