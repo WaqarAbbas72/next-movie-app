@@ -155,7 +155,7 @@ const Page = () => {
             alt="2 puppies"
             className="lg:hidden block w-full "
           />
-          <div className="opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full" />
+          <div className="opacity-0 bg-gradient-to-t from-gray-900 via-gray-900 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 w-full h-full" />
           <div className=" absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100">
             <svg
               width={64}
