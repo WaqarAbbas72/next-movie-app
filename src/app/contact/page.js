@@ -7,7 +7,7 @@ const Page = () => {
         </h2>
         <p className=" font-normal text-base leading-6 text-gray-600 mt-4 lg:w-5/12 md:w-9/12 mx-auto">
           Follow us on instagram @
-          <span className="underline cursor-pointer">netflixofficialmoveis</span> and
+          <span className="underline cursor-pointer">netflixofficialmoveis</span> and don't forget to 
           tag us to get featured on our timeline
         </p>
       </div>

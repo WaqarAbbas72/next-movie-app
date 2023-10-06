@@ -22,7 +22,7 @@ const Movies = async () => {
         console.error("Error fetching data:", error);
         return (
             <div className="flex flex-col justify-center items-center mt-20">
-                <h1 className="text-lg text-red-600">Error occurred while fetching data</h1>
+                <h1 className="text-lg text-red-600">Error occurred while fetching data from API</h1>
                 <Link href='/' className="text-gray-600 underline">Back to Home</Link>
             </div>
         );
