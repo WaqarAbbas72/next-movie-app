@@ -20,9 +20,9 @@ const page = async ({ params }) => {
       // Handle the case where the movie with the given id is not found
       return (
         <div className="flex flex-col justify-center items-center pt-20">
-          <h1 className="text-lg text-red-600">No Movies found related to your search!</h1>
+          <h1 className="text-lg text-red-600">No results found related to your search!</h1>
           <Link href="/movies" className="text-gray-600 underline">
-            Back to Movies
+            Goto Movies
           </Link>
         </div>
       );
@@ -31,7 +31,7 @@ const page = async ({ params }) => {
     return (
       <div className="p-3 sm:p-10">
         <Link href="/movies" className="text-gray-600 underline">
-          Back to Movies
+         Goto Movies
         </Link>
         <p className="font-bold text-xl text-red-600 my-5">
           NETFLIX <span className="text-gray-400">/ {main_data.type}</span>
